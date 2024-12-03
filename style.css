@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+* { 
+ 
+    box-sizing: border-box; 
+   
+  } 
+   
+
+ 
+  body { 
+   
+    font-family: Arial; 
+   
+    padding: 10px; 
+  
+    background-color: #333333;
+   
+    /* background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);  */
+   
+  } 
+   
+   
+   
+  /* Header/Blog Title */ 
+  
+  .header {
+    position: relative;
+    padding: 30px;
+    text-align: center;
+    /* background-image: url("img/header.jpg");
+    background-size: cover; */
+  }
+  
+  .header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/header.jpg");
+    background-size: cover;
+    filter: brightness(70%); /* Adjust the brightness percentage as desired */
+    z-index: -1;
+  }
+  div.topBotomBordersIn a:before, div.topBotomBordersIn a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: gold;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.topBotomBordersIn a:before
+{
+    top: 0px;
+    transform: translateY(-10px);
+}
+
+div.topBotomBordersIn a:after
+{
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-left {
+  flex-grow: 1;
+}
+
+.navbar-right {
+  flex-grow: 0;
+}
+  div.container
+  {
+      font-family: Raleway;
+      margin: 0 auto;
+    padding: 1em 2em;
+  }
+  
+  div.container a
+  {
+      color: goldenrod;
+      text-decoration: none;
+      font: 20px Raleway;
+      margin: 0px 10px;
+      padding: 10px 10px;
+      position: relative;
+      z-index: 0;
+      cursor: pointer;
+  }
+   
+  .header h1 { 
+   
+    font-family: 'Alex Brush' , cursive;
+    font-size: 60px; 
+    color: #FFD700;
+   
+  } 
+  .header p { 
+   
+    font-family: 'Alex Brush' , cursive;
+    font-size: 30px;
+    color: white;
+   
+  } 
+   
+  .topnav {
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+  }  
+   
+#navbar{
+    z-index: 1;
+}
+
+.nav-link{
+  color: gold;
+}
+   
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 98%;
+  }
+   
+  /* Create two unequal columns that floats next to each other */ 
+   
+  /* Left column */ 
+   
+  .leftcolumn {    
+   
+    float: left; 
+   
+    width: 75%; 
+   
+  } 
+   
+   
+   
+  /* Right column */ 
+   
+  .rightcolumn { 
+   
+    float: left; 
+   
+    width: 25%; 
+   
+   
+    padding-left: 20px; 
+   
+  } 
+   
+   
+   
+  /* Fake image */ 
+   
+  .image{
+    justify-content: center;
+    text-align: center;
+  }
+   
+   .productContainer{
+     display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   
+  /* Add a card effect for articles */ 
+   
+  .card { 
+   
+    background-color: #FFFFF0; 
+   
+    padding: 20px; 
+   
+    margin-top: 20px; 
+
+    border-radius: 20px;
+    
+  } 
+  
+  .card h2{
+
+    color: #8B0000;
+    font-family: 'Alex Brush' , cursive;
+  }
+  .card p,h5{
+
+    font-family: 'Raleway' , sans-serif;
+  }
+   
+   
+
+   
+   
+   
+  /* Footer */ 
+   
+  .footer { 
+   
+    padding: 20px; 
+   
+    text-align: center; 
+   
+    margin-top: 20px; 
+
+    background-color: #474747;
+    color: whitesmoke;
+   
+  } 
+  .button {
+    background: #fff;
+    color: #8B0000;
+    border: 2px solid #8B0000;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    transition: color 400ms;
+    width: 120px;
+    height: 50px;
+}
+.button-box {
+    
+    /* border: 1px solid black; */
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #8B0000;
+    z-index: -1;
+    transition: transform 400ms ease-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.button:hover::before {
+   transform: scaleX(1);
+}
+
+.button:hover {
+    color: #fff;
+}
+   
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem;
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+ul li {
+  padding: 1rem;
+}
+
+.fab {
+  font-size: 5rem;
+}
+
+/* transition for social icon hover animation */
+.fa-facebook,
+.fa-codepen,
+.fa-youtube,
+.fa-instagram,
+.fa-github,
+.fa-pinterest {
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+/* social media icons hover color */
+.fa-facebook:hover,
+.fa-facebook:focus {
+  color: #1877f2;
+  transform: scale(1.1);
+}
+
+.fa-twitter:hover,
+.fa-twitter:focus {
+  color: #1da1f2;
+  transform: scale(1.1);
+}
+
+
+.fa-instagram:hover,
+.fa-instagram:focus {
+  color: #bd22a2;
+  transform: scale(1.1);
+}
+
+.social-media{
+  justify-content: center;
+  text-align: center;
+}
+
+.product {
+  width: 30%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.product h2 {
+  margin-top: 10px;
+}
+
+
+
+
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */ 
+   
+  @media screen and (max-width: 800px) { 
+   
+    .leftcolumn, .rightcolumn {    
+   
+      width: 100%; 
+   
+      padding: 0; 
+   
+    } 
+   
+  } 
+   
+   
+   
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */ 
+   
+  @media screen and (max-width: 400px) { 
+   
+    .topnav a { 
+   
+      float: none; 
+   
+      width: 100%; 
+   
+    } 
+   
+  } 
